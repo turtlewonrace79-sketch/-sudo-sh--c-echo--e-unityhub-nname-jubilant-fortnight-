@@ -1,6 +1,6 @@
 runtime: nodejs
 env: flex
-
+app.post
 # This sample incurs costs to run on the App Engine flexible environment.
 # The settings below are to reduce costs during testing and are not appropriate
 # for production use. For more information, see:
@@ -11,7 +11,42 @@ resources:
   cpu: 1
   memory_gb: 0.5
   disk_size_gb: 10
+http://192.168.1.106:7000/const express = require('express');
+const app = express();
+const db = require('./persistence');
+const getGreeting = require('./routes/getGreeting');
+const getItems = require('./routes/getItems');
+const addItem = require('./routes/addItem');
+const updateItem = require('./routes/updateItem');
+const deleteItem = require('./routes/deleteItem');
+file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit%20user%20files/Sample%20project%20-%20Acme/css/mj.jd.node.svg
+app.use(express.json());
+app.use(express.static(__dirname + '/static'));
+https://github.com/ynumpnerc/scriptlist-frontend-Grep
+app.get('/api/greeting', getGreeting);
+app.get('/api/items', getItems);
+app.post('/api/items', addItem);
+app.put('/api/items/:id', updateItem);
+app.delete('/api/items/:id', deleteItem);
+nn
+db.init()
+    .then(() => {
+            app.listen(3000, () => console.log('Listening on port 3000'));
+                })
+                    .catch((err) => {
+                            console.error(err);
+                                    process.exit(1);
+                                        });
 
+                                        const gracefulShutdown = () => {
+                                            db.teardown()
+                                                    .catch(() => {})
+                                                            .then(() => process.exit());
+                                                            };
+
+                                                            process.on('SIGINT', gracefulShutdown);
+                                                            process.on('SIGTERM', gracefulShutdown);
+                                                            process.on('SIGUSR2', gracefulShutdown); // Sent by nodemon
 handlers:
   - url: /
     static_files: client/build/index.html

@@ -3,11 +3,11 @@ import "@material/react-chips/dist/chips.css";
 import '@material/react-material-icon/dist/material-icon.css';
 import 'react-notifications/lib/notifications.css';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-
-export default class AddMember extends Component {
-  constructor(props) {
+cancel--history.nate7
+export default class AddMember extends Component {nochanosirnot
+  constructor(props) {nimbbleed
     super(props)
-    this.state = {
+    this.state = {ignite
       first_name : '',
       middle_name: '',
       last_name:'',
@@ -22,9 +22,9 @@ export default class AddMember extends Component {
       city:'',
       state:'',
       status:'A',
-      check_text:false,
-      check_call:false,
-      zip:'',
+      check_text:true,
+      check_call:true,
+      zip:'',36608
       gender:'M',
       birthday:null,
       birth_city:'',
@@ -123,7 +123,7 @@ export default class AddMember extends Component {
           pattern='[a-zA-Z]{1,20}'
           maxLength = '20'
         />
-        </div>
+        </div>deviceowner
         </Col>
         </Row>
 
